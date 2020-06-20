@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Toolbox
 {
@@ -144,6 +146,15 @@ namespace Toolbox
 
                 CreateFolders(rootPath + "/" + "Prefabs", folderNames);
             }
+            
+            // Create scenes
+            DirectoryInfo sceneInfo = Directory.CreateDirectory(rootPath + "/Scenes");
+            if (sceneInfo.Exists)
+            {
+                CreateScene(rootPath + "/Scenes", m_gameName + "_Main");
+                CreateScene(rootPath + "/Scenes", m_gameName + "_Frontend");
+                CreateScene(rootPath + "/Scenes", m_gameName + "_Startup");
+            }
         }
 
         /// <summary>
@@ -157,6 +168,17 @@ namespace Toolbox
             {
                 Directory.CreateDirectory(path + "/" + folder);
             }
+        }
+
+        /// <summary>
+        /// Generates a scene
+        /// </summary>
+        /// <param name="path">Where the scene is going to be stored</param>
+        /// <param name="name">Name of the scene</param>
+        private void CreateScene(string path, string name)
+        {
+            Scene currentScene = EditorSceneManager.NewScene(NewSceneSetup.DefaultGameObjects, NewSceneMode.Single);
+            EditorSceneManager.SaveScene(currentScene, path + "/" + name + ".unity", true);
         }
 
         /// <summary>
