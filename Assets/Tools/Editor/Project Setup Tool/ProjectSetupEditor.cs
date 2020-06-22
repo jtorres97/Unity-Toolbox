@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 namespace Toolbox
 {
-    public class ProjectSetupWindow : EditorWindow
+    public class ProjectSetupEditor : EditorWindow
     {
         #region Variables
         
@@ -19,7 +19,7 @@ namespace Toolbox
         /// <summary>
         /// Window to show in the Editor
         /// </summary>
-        public static ProjectSetupWindow Window;
+        public static ProjectSetupEditor Editor;
         
         #endregion
         
@@ -30,8 +30,8 @@ namespace Toolbox
         /// </summary>
         public static void InitializeWindow()
         {
-            Window = EditorWindow.GetWindow<ProjectSetupWindow>("Project Setup");
-            Window.Show();
+            Editor = EditorWindow.GetWindow<ProjectSetupEditor>("Project Setup");
+            Editor.Show();
         }
 
         /// <summary>
@@ -48,13 +48,13 @@ namespace Toolbox
                 CreateProjectFolders();
             }
             
-            if (Window != null)
-                Window.Repaint();
+            if (Editor != null)
+                Editor.Repaint();
         }
         
         #endregion
 
-        #region CustomMethods
+        #region Custom Methods
 
         /// <summary>
         /// Creates the folders for our project structure
@@ -186,8 +186,8 @@ namespace Toolbox
         /// </summary>
         private static void CloseWindow()
         {
-            if (Window)
-                Window.Close();
+            if (Editor)
+                Editor.Close();
         }
 
         #endregion
