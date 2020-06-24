@@ -16,3 +16,6 @@ Custom general purpose tools for development in Unity to make certain tasks easi
   * **Rename Objects** - Renames a selection of objects with a given prefix, name, suffix and optional numbering.
   * **Replace Objects** - Replaces a selection of objects with another object.
   * **Show Icon On GameObject** - Shows a script icon in the inspector on GameObjects that have scripts attatched to them.
+
+## Usage
+Simply clone the repository into the 'Assets' folder of a Unity project and you're good to go.
