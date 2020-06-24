@@ -7,10 +7,10 @@ Custom general purpose tools for development in Unity to make certain tasks easi
 * **Scene Select Dropdown** - Opens a window which contains a dropdown that allows you to choose a scene in your game and switch to it via that dropdown.
 * **Remove Missing Scripts** - Removes any missing scripts from objects in your project.
 * **Transform Resetter** - Various tools to assist in transform resetting.
-  * **Reset Local Position - Resets the position of the transform node(s).
-  * **Reset Local Rotation - Resets the rotation of the transform node(s).
-  * **Reset Local Scale - Resets the scale of the transform node(s).
-  * **Reset Everything - Resets the position, rotation, AND scale of the transform node(s).
+  * **Reset Local Position** - Resets the position of the transform node(s).
+  * **Reset Local Rotation** - Resets the rotation of the transform node(s).
+  * **Reset Local Scale** - Resets the scale of the transform node(s).
+  * **Reset Everything** - Resets the position, rotation, AND scale of the transform node(s).
 * **GameObject Related Tools** - Various tools realted to GameObjects in Unity.
   * **Group Objects** - Parents a selection of objects to a root object.
   * **Rename Objects** - Renames a selection of objects with a given prefix, name, suffix and optional numbering.
